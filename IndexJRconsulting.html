@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JR Consulting Tech — Advanced Semiconductor & AI Hardware Consulting</title>
+  <meta name="description" content="JR Consulting Tech provides expert consulting in ASIC & FPGA design, 3D‑IC integration, EDA flow optimization, and AI/ML hardware acceleration (NVIDIA stack, D‑Matrix).">
+  <meta name="author" content="JR Consulting Tech">
+  <meta property="og:title" content="JR Consulting Tech — Advanced Semiconductor & AI Hardware Consulting">
+  <meta property="og:description" content="ASIC & FPGA • 3D‑IC • EDA Optimization • NVIDIA Stack • D‑Matrix">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jrconsultingtech.com/">
+  <meta name="theme-color" content="#0b63ff">
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#111827;
+      --muted:#6b7280;
+      --brand:#0b63ff;
+      --brand-2:#2f5fff;
+      --surface:#f5f7fb;
+      --ring: rgba(11,99,255,.15);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji","Segoe UI Emoji";}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1040px;margin:0 auto;padding:0 20px}
+    header{
+      position:sticky;top:0;background:rgba(255,255,255,.8);backdrop-filter:saturate(140%) blur(8px);
+      border-bottom:1px solid #eef2f7; z-index:10;
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700;font-size:18px;letter-spacing:.2px}
+    .logo{width:28px;height:28px;display:inline-block}
+    nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0}
+    nav a{font-weight:600;color:#1f2937}
+    .hero{padding:64px 0 40px;background:linear-gradient(180deg, #f7f9ff 0, #fff 70%);}
+    .hero h1{font-size:clamp(28px,4vw,44px);line-height:1.15;margin:8px 0 12px}
+    .hero p{font-size:clamp(16px,2.2vw,19px);color:var(--muted);max-width:760px}
+    .badge{display:inline-flex;align-items:center;gap:10px;padding:8px 12px;border-radius:999px;background:#eef4ff;border:1px solid #dbe7ff;color:#1d4ed8;font-weight:600}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:22px}
+    .card{grid-column:span 12;background:#fff;border:1px solid #eef2f7;border-radius:16px;padding:22px;box-shadow:0 1px 0 rgba(5,18,60,.04)}
+    .card h3{margin:6px 0 8px;font-size:20px}
+    .muted{color:var(--muted)}
+    .services li{margin:10px 0}
+    .cta{display:inline-flex;align-items:center;gap:10px;margin-top:18px;background:var(--brand);color:#fff;border-radius:12px;padding:12px 16px;font-weight:700;border:0}
+    .cta:hover{background:var(--brand-2);cursor:pointer}
+    .about{grid-column:span 7}
+    .aside{grid-column:span 5}
+    @media (max-width:900px){
+      .about,.aside{grid-column:span 12}
+    }
+    footer{margin:40px 0 28px;color:var(--muted);font-size:14px}
+    /* subtle circuit accent */
+    .accent{
+      position:relative;isolation:isolate;border-radius:16px;overflow:hidden;
+    }
+    .accent:before{
+      content:"";position:absolute;inset:0;z-index:-1;background:
+        radial-gradient(600px 180px at 10% -10%, rgba(11,99,255,.10), transparent 60%),
+        radial-gradient(400px 120px at 90% 0%, rgba(14,165,233,.12), transparent 60%);
+    }
+    .kpis{display:flex;gap:18px;flex-wrap:wrap;margin-top:8px}
+    .kpi{background:var(--surface);border:1px solid #e6ebf5;border-radius:12px;padding:12px 14px;min-width:160px}
+    .kpi .big{font-weight:800;font-size:22px}
+    .contact-card{display:flex;gap:14px;align-items:flex-start}
+    .icon{width:22px;height:22px;flex:0 0 22px;opacity:.85}
+    .hidden{display:none}
+    .menu-btn{display:none}
+    @media (max-width:720px){
+      nav ul{display:none}
+      .menu-btn{display:inline-flex;align-items:center;gap:8px;border:1px solid #e5e7eb;background:#fff;border-radius:10px;padding:8px 12px}
+      .menu-open nav ul{display:flex;flex-direction:column;position:absolute;right:20px;top:56px;background:#fff;border:1px solid #eef2f7;border-radius:12px;padding:12px;width:200px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+      .menu-open nav ul a{padding:8px 6px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav" id="top">
+      <div class="brand">
+        <!-- Inline SVG logo -->
+        <svg class="logo" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#0b63ff"/>
+              <stop offset="1" stop-color="#2f5fff"/>
+            </linearGradient>
+          </defs>
+          <img src="JRconsultingLogoB.jpg" alt="logo" width="78" height="44" >
+          <path d="M10 34c6-10 14-18 24-24" fill="none" stroke="url(#grad)" stroke-width="3.2" stroke-linecap="round"/>
+          <circle cx="10" cy="34" r="3" fill="#0b63ff"/>
+          <circle cx="22" cy="28" r="3" fill="#0b63ff"/>
+          <circle cx="34" cy="22" r="3" fill="#0b63ff"/>
+        </svg>
+        <span>JR Consulting Tech</span>
+      </div>
+      <nav>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">Menu ▾</button>
+        <ul id="navLinks">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="badge">ASIC • FPGA • 3D‑IC • EDA • AI Hardware</span>
+        <h1>Advanced Semiconductor &amp; AI Hardware Consulting</h1>
+        <p>
+          Independent consulting focused on ASIC &amp; FPGA design, 3D‑IC integration, and EDA flow optimization — with hands‑on acceleration for AI/ML workloads (NVIDIA stack, D‑Matrix). Engagements from architecture to bring‑up, performance, and design closure.
+        </p>
+        <a class="cta" href="mailto:info@jrconsultingtech.com">Start a conversation →</a>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="grid">
+        <div class="card about accent" id="about">
+          <h3>About</h3>
+          <p class="muted">
+            Operating since <strong>2014</strong> under <em>Jerome Ribo Consulting</em> and now as <em>JR Consulting Tech</em>, the practice serves startups and established semiconductor teams across architecture, design, and verification. Experience spans high‑speed I/O (SERDES/CDR), advanced packaging, and tool flow tuning across leading EDA platforms.
+          </p>
+          <div class="kpis">
+            <div class="kpi">
+              <div class="big">2014→Now</div>
+              <div class="muted">Independent practice</div>
+            </div>
+            <div class="kpi">
+              <div class="big">ASIC / FPGA</div>
+              <div class="muted">Design & bring‑up</div>
+            </div>
+            <div class="kpi">
+              <div class="big">3D‑IC</div>
+              <div class="muted">Flow & integration</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card aside" id="services">
+          <h3>Services</h3>
+          <ul class="services">
+            <li><strong>ASIC &amp; FPGA Design</strong> — architecture, RTL, verification, timing closure, and bring‑up.</li>
+            <li><strong>3D‑IC Integration &amp; EDA Flow Optimization</strong> — packaging, partitioning, floorplanning, and tool tuning.</li>
+            <li><strong>AI/ML Hardware Acceleration</strong> — NVIDIA stack and D‑Matrix flows; model‑to‑silicon performance work.</li>
+            <li><strong>High‑Speed Interfaces</strong> — SERDES, CDR, memory subsystems; signal integrity considerations.</li>
+            <li><strong>Prototyping &amp; Performance</strong> — FPGA prototyping, profiling, and optimization.</li>
+          </ul>
+        </div>
+
+        <div class="card" id="contact">
+          <h3>Contact</h3>
+          <div class="contact-card">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 6.5A2.5 2.5 0 0 1 4.5 4h15A2.5 2.5 0 0 1 22 6.5v11A2.5 2.5 0 0 1 19.5 20h-15A2.5 2.5 0 0 1 2 17.5v-11Zm2.3-.5 7.2 5.1a1 1 0 0 0 1.2 0L20 6" fill="none" stroke="#111827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>
+              <div><a href="mailto:info@jrconsultingtech.com">info@jrconsultingtech.com</a></div>
+              <div class="muted">Alt: <a href="mailto:jribo@jrconsultingtech.com">jribo@jrconsultingtech.com</a></div>
+            </div>
+          </div>
+          <div class="contact-card" style="margin-top:10px">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4z" fill="none" stroke="#111827" stroke-width="1.5"/><path d="M8 10h8M8 14h5" stroke="#111827" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <div>
+              <div>LinkedIn</div>
+              <div class="muted"><a href="https://www.linkedin.com/in/jerome-ribo-8b96325" aria-label="LinkedIn profile (https://www.linkedin.com/in/jerome-ribo-8b96325)">https://www.linkedin.com/in/jerome-ribo-8b96325</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    © <span id="year"></span> JR Consulting Tech • All Rights Reserved
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('menuBtn');
+    const body = document.body;
+    btn?.addEventListener('click', () => body.classList.toggle('menu-open'));
+
+    // Current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
